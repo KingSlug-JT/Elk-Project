@@ -2,9 +2,9 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![](Images/diagram_filename.png)
+![](Diagrams/Elk_NetworkDiagram.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the respective playbook files may be used to install only certain pieces of it, such as Filebeat and metricbeat.
 
   - [filebeat-config.yml](Ansible/filebeat-config.yml)
   - [filebeat-playbook.yml](Ansible/filebeat-playbook.yml)
@@ -66,7 +66,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![docker ps output](Images/Elk_dockerPs.png)
+![](Images/Elk_dockerPs.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -89,9 +89,8 @@ SSH into the control node and follow the steps below:
 - Update the configuration files to include correct IP addresses of the local IP addresses for the elk server @ 10.2.0.4:5601 and 10.2.0.4:9200 
 - Run the filebeat and metricbeat playbooks, and navigate to kibana server with the ip pf elk server to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- The playbooks are (Ansible/filebeat-playbook.yml) and (Ansible/metricbeat-playbook.yml) you will need to copy these files over to the ansible roles directory on the ansible container.
-- You will need to update the filebeat-config.yml and metricbeat-config.yml on lines 1106 and 1806 to add the elk private IP addess so that the deployment modules are deployed corecctly.
-- To navigate to the elk server use web address http://<public elk ip>:5601/app/kibana#/home
+ The playbooks are (Ansible/filebeat-playbook.yml) and (Ansible/metricbeat-playbook.yml) you will need to copy these files over to the ansible roles directory on the ansible container.
+ You will need to update the filebeat-config.yml and metricbeat-config.yml on lines 1106 and 1806 to add the elk private IP addess so that the deployment modules are deployed corecctly.
+ To navigate to the elk server use web address http://<public elk ip>:5601/app/kibana#/home
 
 
